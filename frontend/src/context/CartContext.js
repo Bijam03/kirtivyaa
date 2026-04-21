@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
-import { useAuth } from './AuthContext';
 import toast from 'react-hot-toast';
 
 const CartContext = createContext(null);
