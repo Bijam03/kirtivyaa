@@ -1,0 +1,54 @@
+.order-detail-page { min-height:100vh; background:var(--cream); }
+.order-hero { background:linear-gradient(135deg,var(--cream-dark),var(--pink-light)); padding:50px 0 36px; }
+.order-hero p { font-size:14px; color:var(--brown-light); margin-top:6px; }
+.order-layout { display:grid; grid-template-columns:1fr 320px; gap:24px; align-items:start; padding:36px 0 80px; }
+.order-main { display:flex; flex-direction:column; gap:20px; }
+.order-card { background:var(--white); border-radius:20px; padding:24px; box-shadow:var(--shadow-sm); }
+.order-card h3 { font-family:var(--ff-display); font-size:18px; color:var(--brown); margin-bottom:18px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.status-chip { padding:4px 12px; border-radius:var(--radius-pill); font-size:12px; font-weight:700; }
+.status-chip.status-Pending         { background:#fff3e0; color:#e65100; }
+.status-chip.status-Confirmed       { background:#e8f5e9; color:#2e7d32; }
+.status-chip.status-Baking          { background:#fff8e1; color:#f57f17; }
+.status-chip.status-Ready           { background:#e3f2fd; color:#1565c0; }
+.status-chip.status-Out-for-Delivery{ background:#f3e5f5; color:#7b1fa2; }
+.status-chip.status-Delivered       { background:#e8f5e9; color:#1b5e20; }
+.status-chip.status-Cancelled       { background:#ffebee; color:#c62828; }
+
+/* Track */
+.status-track { display:flex; align-items:flex-start; gap:0; margin-top:20px; overflow-x:auto; padding-bottom:8px; }
+.track-step { display:flex; flex-direction:column; align-items:center; flex:1; min-width:80px; position:relative; }
+.track-dot { width:28px; height:28px; border-radius:50%; border:2px solid var(--cream-mid); background:var(--white); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:var(--white); z-index:1; }
+.track-step.done .track-dot { background:var(--brown); border-color:var(--brown); }
+.track-step.current .track-dot { background:var(--gold); border-color:var(--gold); animation:pulse 1.5s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(201,148,58,0.4)} 50%{box-shadow:0 0 0 8px rgba(201,148,58,0)} }
+.track-line { position:absolute; top:14px; left:50%; right:-50%; height:2px; background:var(--cream-mid); z-index:0; }
+.track-step.done .track-line { background:var(--brown); }
+.track-label { font-size:10px; color:var(--brown-light); margin-top:8px; text-align:center; font-weight:500; }
+.track-step.done .track-label, .track-step.current .track-label { color:var(--brown); font-weight:600; }
+
+/* Items */
+.order-item-row { display:flex; gap:12px; align-items:center; padding:14px 0; border-bottom:1px solid var(--cream-mid); }
+.order-item-row:last-child { border-bottom:none; }
+.order-item-img { width:60px; height:60px; border-radius:10px; overflow:hidden; background:var(--cream-dark); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:28px; }
+.order-item-img img { width:100%; height:100%; object-fit:cover; }
+.order-item-body { flex:1; }
+.order-item-name { font-size:14px; font-weight:600; color:var(--brown); margin-bottom:3px; }
+.order-item-meta { font-size:12px; color:var(--brown-light); }
+.order-item-total { font-size:15px; font-weight:700; color:var(--brown-light); flex-shrink:0; }
+
+/* History */
+.history-list { display:flex; flex-direction:column; gap:16px; }
+.history-item { display:flex; gap:14px; }
+.history-dot { width:10px; height:10px; border-radius:50%; background:var(--brown); flex-shrink:0; margin-top:4px; }
+.history-status { font-size:14px; font-weight:600; color:var(--brown); }
+.history-msg { font-size:13px; color:var(--brown-light); }
+.history-time { font-size:11px; color:var(--brown-light); margin-top:2px; }
+
+/* Totals */
+.order-total-rows { display:flex; flex-direction:column; gap:8px; margin-bottom:16px; }
+.otr { display:flex; justify-content:space-between; font-size:14px; color:var(--brown-mid); }
+.otr.grand { font-family:var(--ff-display); font-size:18px; font-weight:700; color:var(--brown); border-top:1px solid var(--cream-mid); padding-top:10px; margin-top:4px; }
+.order-info-rows { border-top:1px solid var(--cream-mid); padding-top:14px; display:flex; flex-direction:column; gap:7px; }
+.oir { font-size:13px; color:var(--brown-mid); }
+
+@media (max-width:860px) { .order-layout { grid-template-columns:1fr; } }
