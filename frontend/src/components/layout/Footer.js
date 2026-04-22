@@ -9,10 +9,10 @@ const Footer = () => {
 
   const brand  = s?.brandName     || 'Kirtivyaa';
   const wa     = s?.whatsappNumber || process.env.REACT_APP_WHATSAPP_NUMBER;
-  const phone  = wa?.replace(/^91/, '') || '9876543210';
+  const phone  = wa?.replace(/^91/, '') || '7350554539';
   const city   = s?.city          || 'Pune';
-  const email  = s?.email         || 'hello@kirtivyaa.in';
-  const addr   = s?.address       || 'Kothrud, Pune, Maharashtra';
+  const email  = s?.email         || 'agarwalkirtim20@gmail.com';
+  const addr   = s?.address       || 'Khese Park, Lohegaon Pune, Maharashtra';
   const hours  = s?.openingHours  || 'Mon–Sun: 8 AM – 8 PM';
 
   return (
