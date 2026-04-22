@@ -1,23 +1,167 @@
-.products-hero { background:linear-gradient(135deg,var(--cream-dark),var(--pink-light)); padding:60px 0 40px; }
-.products-hero p { font-size:15px; color:var(--brown-light); margin-top:6px; }
-.page-title { font-family:var(--ff-display); font-size:clamp(28px,4vw,48px); font-weight:700; color:var(--brown); margin-top:6px; }
-.products-layout { padding-top:40px; padding-bottom:60px; }
-.filter-bar { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:20px; }
-.search-wrap { flex:1; min-width:200px; position:relative; }
-.search-icon { position:absolute; left:14px; top:50%; transform:translateY(-50%); font-size:16px; color:var(--brown-light); pointer-events:none; }
-.search-input { width:100%; padding:12px 14px 12px 42px; border:1.5px solid var(--cream-mid); border-radius:var(--radius-pill); font-family:var(--ff-body); font-size:14px; color:var(--brown); background:var(--white); outline:none; transition:var(--transition); }
-.search-input:focus { border-color:var(--brown-light); }
-.category-pills { display:flex; gap:8px; flex-wrap:wrap; }
-.filter-pill { padding:9px 18px; border-radius:var(--radius-pill); border:1.5px solid var(--cream-mid); background:var(--white); font-family:var(--ff-body); font-size:13px; font-weight:500; color:var(--brown-mid); transition:var(--transition); }
-.filter-pill:hover, .filter-pill.active { border-color:var(--brown); background:var(--brown); color:var(--cream); }
-.sort-select { padding:9px 16px; border-radius:var(--radius-pill); border:1.5px solid var(--cream-mid); background:var(--white); font-family:var(--ff-body); font-size:13px; color:var(--brown-mid); outline:none; cursor:pointer; }
-.results-count { font-size:13px; color:var(--brown-light); margin-bottom:24px; }
-.products-grid-full { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-.empty-state { text-align:center; padding:80px 20px; color:var(--brown-light); }
-.empty-state span { font-size:56px; display:block; margin-bottom:14px; }
-.empty-state h3 { font-family:var(--ff-display); font-size:22px; color:var(--brown); margin-bottom:8px; }
-.pagination { display:flex; gap:8px; justify-content:center; margin-top:40px; }
-.page-btn { width:38px; height:38px; border-radius:50%; border:1.5px solid var(--cream-mid); background:var(--white); font-size:13px; font-weight:600; color:var(--brown-mid); transition:var(--transition); }
-.page-btn:hover, .page-btn.active { background:var(--brown); border-color:var(--brown); color:var(--cream); }
-@media (max-width:1000px) { .products-grid-full { grid-template-columns:repeat(2,1fr); } }
-@media (max-width:600px) { .products-grid-full { grid-template-columns:1fr; } .filter-bar { flex-direction:column; align-items:stretch; } }
+.products-hero {
+  background: linear-gradient(135deg, var(--cream-dark), var(--pink-light));
+  padding: 60px 0 40px;
+}
+.products-hero p {
+  font-size: 15px;
+  color: var(--brown-light);
+  margin-top: 6px;
+}
+.page-title {
+  font-family: var(--ff-display);
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  color: var(--brown);
+  margin-top: 6px;
+}
+.products-layout {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.search-wrap {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+}
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--brown-light);
+  pointer-events: none;
+}
+.search-input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border: 1.5px solid var(--cream-mid);
+  border-radius: var(--radius-pill);
+  font-family: var(--ff-body);
+  font-size: 14px;
+  color: var(--brown);
+  background: var(--white);
+  outline: none;
+  transition: var(--transition);
+}
+.search-input:focus {
+  border-color: var(--brown-light);
+}
+.category-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.filter-pill {
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--cream-mid);
+  background: var(--white);
+  font-family: var(--ff-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--brown-mid);
+  transition: var(--transition);
+}
+.filter-pill:hover,
+.filter-pill.active {
+  border-color: var(--brown);
+  background: var(--brown);
+  color: var(--cream);
+}
+.sort-select {
+  padding: 9px 16px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--cream-mid);
+  background: var(--white);
+  font-family: var(--ff-body);
+  font-size: 13px;
+  color: var(--brown-mid);
+  outline: none;
+  cursor: pointer;
+}
+.results-count {
+  font-size: 13px;
+  color: var(--brown-light);
+  margin-bottom: 24px;
+}
+.products-grid-full {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--brown-light);
+}
+.empty-state span {
+  font-size: 56px;
+  display: block;
+  margin-bottom: 14px;
+}
+.empty-state h3 {
+  font-family: var(--ff-display);
+  font-size: 22px;
+  color: var(--brown);
+  margin-bottom: 8px;
+}
+.pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 40px;
+}
+.page-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cream-mid);
+  background: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brown-mid);
+  transition: var(--transition);
+}
+.page-btn:hover,
+.page-btn.active {
+  background: var(--brown);
+  border-color: var(--brown);
+  color: var(--cream);
+}
+@media (max-width: 1000px) {
+  .products-grid-full {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid-full {
+    grid-template-columns: 1fr;
+  }
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .category-pills {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+  .filter-pill {
+    flex-shrink: 0;
+  }
+  .sort-select {
+    width: 100%;
+  }
+  .search-input {
+    font-size: 16px;
+  }
+}
