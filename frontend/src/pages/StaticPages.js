@@ -97,7 +97,7 @@ export const ContactPage = () => {
   const s = useSettings();
   const brand = s?.brandName || 'Kirtivyaa';
   const wa    = s?.whatsappNumber || process.env.REACT_APP_WHATSAPP_NUMBER;
-  const phone = wa?.replace(/^91/, '') || '9876543210';
+  const phone = wa?.replace(/^91/, '') || '7350554539';
   const openWA = (msg='') => window.open(`https://wa.me/${wa}${msg?'?text='+encodeURIComponent(msg):''}`, '_blank');
 
   return (
@@ -113,8 +113,8 @@ export const ContactPage = () => {
         <div style={{ display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:20, marginBottom:28 }}>
           {[
             { icon:'📱', bg:'#dcf5e8', title:'WhatsApp (Preferred)', detail:`+91 ${phone}\n${s?.openingHours || 'Mon–Sun: 8 AM – 8 PM'}`, action:() => openWA(), label:'💬 Chat Now', btnBg:'var(--green)' },
-            { icon:'📧', bg:'#e8f0fe', title:'Email',                detail:`${s?.email || 'hello@kirtivyaa.in'}\nWe reply within a few hours`, action:() => window.open(`mailto:${s?.email||'hello@kirtivyaa.in'}`), label:'✉️ Send Email', btnBg:'var(--brown)' },
-            { icon:'📍', bg:'var(--cream-dark)', title:'Location',   detail:`${s?.address || 'Kothrud, Pune, Maharashtra — 411038'}\n\nHome delivery available!`, action: null },
+            { icon:'📧', bg:'#e8f0fe', title:'Email',                detail:`${s?.email || 'agarwalkirtim20@gmail.com'}\nWe reply within a few hours`, action:() => window.open(`mailto:${s?.email||'agarwalkirtim20@gmail.com'}`), label:'✉️ Send Email', btnBg:'var(--brown)' },
+            { icon:'📍', bg:'var(--cream-dark)', title:'Location',   detail:`${s?.address || 'Khese Park, Lohegaon Pune, Maharashtra'}\n\nHome delivery available!`, action: null },
             { icon:'⏰', bg:'var(--cream-dark)', title:'Timings',    detail:`${s?.openingHours || 'Monday – Sunday, 8 AM – 8 PM'}\n\nOrder by 10 AM for same-day delivery.`, action: null },
           ].map(c => (
             <div key={c.title} style={{ background:'var(--white)', borderRadius:20, padding:28, boxShadow:'var(--shadow-sm)' }}>
