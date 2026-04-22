@@ -9,9 +9,9 @@ const settingsSchema = new mongoose.Schema({
   tagline:      { type: String, default: 'Freshly Baked Happiness 🍰' },
   ownerName:    { type: String, default: 'Kirti Agarwal' },
   city:         { type: String, default: 'Pune' },
-  whatsappNumber: { type: String, default: '919876543210' },
-  email:        { type: String, default: 'hello@kirtivyaa.in' },
-  address:      { type: String, default: 'Kothrud, Pune, Maharashtra — 411038' },
+  whatsappNumber: { type: String, default: '917350554539' },
+  email:        { type: String, default: 'agarwalkirtim20@gmail.com' },
+  address:      { type: String, default: 'Khese Park, Lohegaon Pune, Maharashtra' },
   openingHours: { type: String, default: 'Mon–Sun: 8 AM – 8 PM' },
   fssaiNumber:  { type: String, default: '' },
   instagramUrl: { type: String, default: '' },
@@ -39,13 +39,13 @@ const settingsSchema = new mongoose.Schema({
   orderCutoffTime:   { type: String, default: '10:00' }, // Same-day order cutoff
 
   // ── Announcements ─────────────────────────────────────
-  announcementBanner: { type: String, default: '' },  // Shows a top bar if non-empty
+  announcementBanner: { type: String, default: 'sale is live!' },  // Shows a top bar if non-empty
   announcementActive: { type: Boolean, default: false },
 
   // ── Store status ──────────────────────────────────────
   storeOpen:        { type: Boolean, default: true },
   storeClosedMessage: { type: String, default: 'We are closed right now. Order via WhatsApp!' },
 
-}, { timestamps: true, _id: false });
+}, { timestamps: true, _id: false }); 
 
 module.exports = mongoose.model('Settings', settingsSchema);
