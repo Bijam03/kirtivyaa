@@ -83,41 +83,10 @@ const HomePage = () => {
   const S         = settings || {};
   const brandName = S.brandName || 'Kirtivyaa';
   const city      = S.city      || 'Pune';
-  /* ── Announcement banner ──────────────────────────── */
-  const [announcementDismissed, setAnnouncementDismissed] = useState(false);
-  const showAnnouncement =
-    S?.announcementActive && S?.announcementBanner && !announcementDismissed;
 
-  /* ── Store closed ─────────────────────────────────── */
-  const storeClosed = S?.storeOpen === false;
 
-  return (
+  return ( 
     <div className="home">
-      {/* Announcement banner */}
-      {showAnnouncement && (
-        <div className="announcement-bar">
-          <span>{S.announcementBanner}</span>
-          <button onClick={() => setAnnouncementDismissed(true)}>✕</button>
-        </div>
-      )}
-
-      {/* Store closed notice */}
-      {storeClosed && (
-        <div className="store-closed-bar">
-          <span>
-            🔴{" "}
-            {S?.storeClosedMessage ||
-              "We are currently closed. Order via WhatsApp!"}
-          </span>
-          <button
-            className="btn-wa"
-            style={{ padding: "6px 14px", fontSize: 12 }}
-            onClick={() => openWA()}
-          >
-            📱 WhatsApp
-          </button>
-        </div>
-      )}
 
       {/* ── HERO ──────────────────────────────────────── */}
       <section className="hero">

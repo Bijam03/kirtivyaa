@@ -76,7 +76,7 @@ const seed = async () => {
   await Settings.findByIdAndUpdate('site_settings', {
     brandName: 'Kirtivyaa',
     city: 'Pune',
-    whatsappNumber: '919876543210',
+    whatsappNumber: '917350554539',
     storeOpen: true,
   }, { upsert: true });
 

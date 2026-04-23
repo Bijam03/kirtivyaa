@@ -21,6 +21,12 @@ import AdminPage         from './pages/admin/AdminPage';
 import ProfilePage       from './pages/ProfilePage';
 
 // ── Protected route: redirect to login, remember return URL ──
+// Scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+};
 const ProtectedRoute = ({ children, adminOnly = false }) => {
   const { user, loading } = useAuth();
   const location = useLocation();
